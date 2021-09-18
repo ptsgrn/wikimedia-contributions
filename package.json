@@ -1,0 +1,8 @@
+{
+  "name": "wikimedia-contributions",
+  "version": "1.0.0",
+  "main": "false",
+  "author": "Patsagorn <patsagorn_y@outlook.com>",
+  "license": "MIT",
+  "private": true
+}
