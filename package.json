@@ -4,5 +4,11 @@
   "main": "false",
   "author": "Patsagorn <patsagorn_y@outlook.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
 }
