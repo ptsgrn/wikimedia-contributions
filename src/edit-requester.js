@@ -78,8 +78,9 @@ $( function () {
 	};
 	Er.prototype.getSetupProcess = function ( data ) {
 		return Er.super.prototype.getSetupProcess.call( this, data )
-			.next( function () {
-				this.actions.setMode( 'step' + this.step );
+      .next(function () {
+        this.step = 1;
+				this.actions.setMode( 'step1' );
 			}, this );
 	};
 	Er.prototype.getActionProcess = function ( action ) {
