@@ -6,9 +6,13 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "live-server"
+    "start": "live-server",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-wikimedia": "^0.20.0",
     "live-server": "^1.2.1"
   }
 }
