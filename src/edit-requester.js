@@ -1,20 +1,11 @@
 /* eslint-disable no-jquery/no-global-selector */
 $( function () {
-	var ER = {
-		version: 0.1,
-		maintainer: 'Patsagorn Y.',
-		feedback: 'WP:TECH',
-		step: 1
-	};
-
-	// Example: An action set used in a process dialog
-	function Er( config ) {
+	function Er(config) {
 		Er.super.call( this, config );
 	}
 	OO.inheritClass( Er, OO.ui.ProcessDialog );
 	Er.static.title = 'ส่งคำขอแก้ไข';
 	Er.static.name = 'erDialog';
-	// An action set that uses modes ('edit' and 'help' mode, in this example).
 	Er.static.actions = [
 		{
 			action: 'back',
@@ -47,7 +38,6 @@ $( function () {
 		},
 		{
 			action: 'process',
-			icon: 'circle',
 			modes: 'step3',
 			label: 'บันทึก',
 			flags: [ 'primary', 'progressive' ]
