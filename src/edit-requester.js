@@ -1,6 +1,16 @@
 /* eslint-disable no-jquery/no-global-selector */
+/**
+ * Interactive Edit Request - Helper for make an edit request.
+ * ส่งคำขอแก้ไขแบบโต้ตอบ - ตัวช่วยสร้างและจัดรูปแบบคำขอแก้ไข
+ *
+ * @author Patsagorn Y. <w.wiki/JSB>
+ * @license MIT
+ * @dependencies OOjs
+ * @revision 2021-10-18
+ */
+
 $( function () {
-	function Er(config) {
+	function Er( config ) {
 		Er.super.call( this, config );
 	}
 	OO.inheritClass( Er, OO.ui.ProcessDialog );
@@ -68,8 +78,8 @@ $( function () {
 	};
 	Er.prototype.getSetupProcess = function ( data ) {
 		return Er.super.prototype.getSetupProcess.call( this, data )
-      .next(function () {
-        this.step = 1;
+			.next( function () {
+				this.step = 1;
 				this.actions.setMode( 'step1' );
 			}, this );
 	};
@@ -89,8 +99,8 @@ $( function () {
 			this.actions.setMode( 'step' + this.step );
 			this.stackLayout.setItem( this[ 'step' + this.step ] );
 		} else if ( action === 'process' ) {
-      let erdialog = this;
-      return new OO.ui.Process(function () {
+			var erdialog = this;
+			return new OO.ui.Process( function () {
 				erdialog.close();
 			} );
 		}
