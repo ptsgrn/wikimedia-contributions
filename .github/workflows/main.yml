@@ -16,5 +16,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: npm ci
-      - run: npm run lint -- --ext .js
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6
+      - run: pnpm ci
+      - run: pnpm run lint -- --ext .js
