@@ -1,4 +1,9 @@
 {
+	"env": {
+		"es6": true,
+		"browser": true,
+		"node": true
+	},
 	"extends": [
 		"wikimedia/client-es5",
 		"wikimedia/jquery",

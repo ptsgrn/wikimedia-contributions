@@ -3,13 +3,13 @@
  * Interactive Edit Request - Helper for make an edit request.
  * ส่งคำขอแก้ไขแบบโต้ตอบ - ตัวช่วยสร้างและจัดรูปแบบคำขอแก้ไข
  *
- * @author Patsagorn Y. <w.wiki/JSB>
+ * @author Patsagorn Y. <https://w.wiki/JSB>
  * @license MIT
  * @dependencies OOjs
  * @revision 2021-10-18
  */
 
-$( function () {
+mw.loader.using( [ 'oojs-ui-core', 'oojs-ui-widgets', 'oojs-ui-windows', 'oojs-ui.styles.icons-editing-core' ] ).done( function () {
 	function Er( config ) {
 		Er.super.call( this, config );
 	}
@@ -60,6 +60,7 @@ $( function () {
 
 		this.step1 = new OO.ui.PanelLayout( { padded: true, expanded: false } );
 		this.step1.$element.append( 'STEP1' );
+		// .append(new );
 
 		this.step2 = new OO.ui.PanelLayout( { padded: true, expanded: false } );
 		this.step2.$element.append( 'STEP2' );
@@ -115,9 +116,15 @@ $( function () {
 		size: 'medium'
 	} );
 	windowManager.addWindows( [ dialog ] );
-
-	$( '.er-not-supported' ).hide();
-	$( '.mw-parser-output .er-container .er-start-button.mw-ui-button' ).show().on( 'click', function () {
-		windowManager.openWindow( dialog );
+	var erbutton = new OO.ui.ButtonWidget( {
+		label: 'ส่งคำขอแก้ไข',
+		flags: [ 'primary', 'progressive' ],
+		icon: 'edit',
+		title: 'ส่งคำขอแก้ไขหน้านี้โดยใช้เครื่องมือช่วยเหลือ'
 	} );
+	$( '.er-not-supported' )
+		.text( '' )
+		.append( erbutton.$element.on( 'click', function () {
+			windowManager.openWindow( dialog );
+		} ) );
 } );
