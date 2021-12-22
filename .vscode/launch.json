@@ -1,15 +1,17 @@
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "chrome",
-      "request": "launch",
-      "name": "Launch Chrome",
-      "url": "https://th.wikipedia.org/wiki/%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B9%83%E0%B8%8A%E0%B9%89:Patsagorn_Y./%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B0%E0%B8%97%E0%B8%A3%E0%B8%B2%E0%B8%A2/edirequest-tree",
-      "webRoot": "${workspaceFolder}"
-    }
-  ]
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Start Server",
+            "skipFiles": [
+                "<node_internals>/**",
+            ],
+            "program": "${workspaceFolder}/.wikidev",
+        }
+    ]
 }
