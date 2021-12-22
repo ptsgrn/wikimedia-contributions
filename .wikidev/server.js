@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { WebSocketServer } = require('ws');
 
-const scriptPath = `${__dirname}/../script.js`;
+const scriptPath = `${__dirname}/../src/edit-requester.js`;
 let scriptContent = "";
 let currentConnections = [];
 
