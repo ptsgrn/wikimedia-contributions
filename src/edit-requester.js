@@ -105,6 +105,7 @@
 											label: 'Fourth'
 										} )
 									];
+									// todo localize this
 									if ( mw.config.get( 'wgNamespaceNumber' ) === 2 ) {
 										ret.splice( 1, 0, new MenuOptionWidget( {
 											data: 'autobio',
@@ -213,7 +214,7 @@
 				windowManager.openWindow( dialog );
 			} ) );
 		dialog.getContent().step1.items[ 1 ].getMenu().on( 'select', function ( element ) {
-			if ( [ 'normal', 'typo', 'style' ].indexOf( String( element.getData() ) ) !== -1 ) {
+			if ( [ 'normal', 'typo', 'style' ].indexOf( String( element.data ) ) !== -1 ) {
 
 			}
 		} );
